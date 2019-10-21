@@ -1,4 +1,4 @@
-interface Noticias {
+interface RespuestaTopHeadlines {
   status: string;
   totalResults: number;
   articles: Article[];

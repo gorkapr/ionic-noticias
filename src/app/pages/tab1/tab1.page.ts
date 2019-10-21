@@ -7,13 +7,16 @@ import { NoticiasService } from 'src/app/services/noticias.service';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page implements OnInit {
+
+  noticias: Article[] = [];
   
   constructor(private noticiasService: NoticiasService) {}
   
   ngOnInit() {
     this.noticiasService.getTopHeadlines()
-      .subscribe(resp => console.log("noticias", resp));
-
-
+      .subscribe( resp => {
+        console.log("noticias", resp.totalResults);
+        this.noticias.push(...resp.articles);
+      });
   }
 }
