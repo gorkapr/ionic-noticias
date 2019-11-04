@@ -28,8 +28,8 @@ export class NoticiasService {
     return this.ejecutarQuery('/top-headlines?country=us');
   }
 
-  getTopHeadLinesCategoria(categoria: string) {
+  getTopHeadLinesCategoria(categoria: string, page: Number) {
     // return this.http.get<RespuestaTopHeadlines>(apiUrl + `?country=de&category=` + categoria + `&apiKey=` + apiKey);
-    return this.ejecutarQuery('/top-headlines?country=us&category=' + categoria);
+    return this.ejecutarQuery('/top-headlines?country=us&category=' + categoria + '&page=' + page.valueOf());
   }
 }

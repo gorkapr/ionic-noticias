@@ -9,3 +9,11 @@ ion-segment-button {
 ion-segment-button:checked {
     color: var(--ion-color-primary) !important;
 }
+
+ion-spinner {
+    color: white;
+}
+
+ion-infinite-scroll {
+    text-align: center;
+}
