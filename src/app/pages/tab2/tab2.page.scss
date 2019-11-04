@@ -6,14 +6,14 @@ ion-segment-button {
     color: white;
 }
 
-ion-segment-button:checked {
+.segment-button-checked {
     color: var(--ion-color-primary) !important;
-}
-
-ion-spinner {
-    color: white;
 }
 
 ion-infinite-scroll {
     text-align: center;
+}
+
+ion-spinner {
+    margin: 15px;
 }

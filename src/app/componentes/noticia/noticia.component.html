@@ -1,7 +1,14 @@
 <ion-card color="dark">
+    <div class="noticia-more">
+        <ion-button fill="clear" (click)="lanzarMenu()">
+            <ion-icon slot="icon-only" name="more"></ion-icon>
+        </ion-button>
+    </div>
     <ion-card-header>
         <ion-card-subtitle>
-            {{indice+1}} - {{noticia.source.name}}
+            <span>
+                {{indice+1}} - {{noticia.source.name}}
+            </span>
         </ion-card-subtitle>
         <ion-card-title (click)="abrirNoticia()">{{noticia.title}}</ion-card-title>
     </ion-card-header>
