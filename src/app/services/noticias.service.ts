@@ -22,10 +22,10 @@ export class NoticiasService {
     return this.http.get<RespuestaTopHeadlines>(query, {headers});
   }
 
-  getTopHeadlines() {
+  getTopHeadlines(page: Number) {
     //return this.http.get(environment.apiKey);
     // return this.http.get<RespuestaTopHeadlines>(apiUrl + `?country=us&apiKey=` + apiKey);
-    return this.ejecutarQuery('/top-headlines?country=us');
+    return this.ejecutarQuery('/top-headlines?country=us&page=' + page.valueOf());
   }
 
   getTopHeadLinesCategoria(categoria: string, page: Number) {

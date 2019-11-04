@@ -7,7 +7,7 @@
 </ion-header>
 
 <!-- md: material design -->
-<ion-segment scrollable (ionChange)="segmentChanged($event)" mode="md" color="primary"> 
+<ion-segment scrollable (ionChange)="segmentChanged($event)" mode="md"> 
   <ion-segment-button checked mode="md" *ngFor="let categoria of categorias" [value]="categoria">
     <ion-label>{{categoria}}</ion-label>
   </ion-segment-button>
@@ -17,7 +17,6 @@
   <app-noticias [noticias]="noticias"></app-noticias>
 
   <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
-    <ion-spinner>
-    </ion-spinner>
+    <ion-spinner></ion-spinner>
   </ion-infinite-scroll>
 </ion-content>
