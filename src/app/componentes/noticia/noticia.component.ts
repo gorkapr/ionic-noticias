@@ -33,14 +33,14 @@ export class NoticiaComponent implements OnInit {
         icon: 'share',
         handler: () => {
           this.socialSharing.share(
-            // this.
-            // this.
-            // this.
-            // this.
+            this.noticia.title,
+            this.noticia.source.name,
+            "",
+            this.noticia.url
           );
         }
       }, {
-        text: 'Favorite',
+        text: 'Favorito',
         cssClass: 'action-dark',
         icon: 'star',
         handler: () => {
